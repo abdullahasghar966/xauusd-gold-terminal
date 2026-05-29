@@ -1,0 +1,108 @@
+.primary-chart-body {
+  position: relative;
+  padding: 8px 4px 6px;
+}
+.primary-chart-body svg { display: block; width: 100%; height: auto; }
+
+.chart-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-group {
+  display: inline-flex;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 3px;
+  background: rgba(10,10,11,0.5);
+}
+.range-btn {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-400);
+  padding: 5px 12px;
+  border-radius: 999px;
+  transition: color 200ms, background 200ms;
+  position: relative;
+  min-height: 28px;
+}
+.range-btn:hover { color: var(--ink-200); }
+.range-btn.active {
+  color: var(--obsidian-0);
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+  box-shadow: 0 0 16px rgba(240,208,128,0.35);
+}
+.range-btn:focus-visible,
+.bb-toggle:focus-visible {
+  outline: 2px solid var(--gold-300);
+  outline-offset: 2px;
+}
+
+.bb-toggle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-400);
+  padding: 5px 10px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: rgba(10,10,11,0.5);
+  transition: color 200ms, background 200ms, border-color 200ms;
+  min-height: 28px;
+}
+.bb-toggle:hover { color: var(--ink-200); }
+.bb-toggle.active {
+  color: var(--obsidian-0);
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+  border-color: var(--gold-500);
+}
+
+/* 44px hit targets at touch sizes */
+@media (max-width: 720px) {
+  .range-btn, .bb-toggle { min-height: 44px; padding-left: 16px; padding-right: 16px; }
+}
+
+.cs-tooltip {
+  position: absolute;
+  min-width: 200px;
+  padding: 12px 14px 12px 14px;
+  background: linear-gradient(180deg, rgba(34,34,42,0.96), rgba(10,10,11,0.96));
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.18);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 120ms;
+}
+.cs-tt-date {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold-200);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hairline);
+}
+.cs-tt-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 16px;
+  font-size: 11.5px;
+  color: var(--ink-300);
+}
+.cs-tt-grid span:nth-child(odd) {
+  font-family: var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--ink-400);
+}
+.cs-tt-grid span:nth-child(even) {
+  text-align: right;
+  color: var(--ink-100);
+}

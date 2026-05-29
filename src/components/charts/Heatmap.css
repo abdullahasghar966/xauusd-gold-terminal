@@ -1,0 +1,22 @@
+.heatmap-card .side-card-body { padding-top: 8px; }
+
+.heatmap-tooltip {
+  position: absolute;
+  pointer-events: none;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, rgba(34,34,42,0.96), rgba(10,10,11,0.96));
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  z-index: 5;
+  min-width: 110px;
+}
+.ht-date {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 9px;
+  color: var(--ink-400);
+  margin-bottom: 2px;
+}
+.ht-val { font-size: 14px; font-weight: 600; }

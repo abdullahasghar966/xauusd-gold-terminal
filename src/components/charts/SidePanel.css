@@ -1,0 +1,86 @@
+.side-card { display: flex; flex-direction: column; }
+.side-card-body {
+  padding: 6px 12px 12px;
+  flex: 1;
+}
+.side-card-body svg { display: block; width: 100%; height: auto; }
+
+/* ── small numeric readout in card-head ──────────────── */
+.rsi-readout {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: rgba(201,168,76,0.05);
+}
+.rsi-readout.rsi-over    { color: var(--bear, #C0392B); border-color: rgba(192,57,43,0.45); }
+.rsi-readout.rsi-under   { color: var(--gold-200, #F0D080); border-color: rgba(240,208,128,0.4); }
+.rsi-readout.rsi-neutral { color: var(--ink-300, #A89878); }
+
+/* ── autocorrelation strip below distribution ────────── */
+.acf-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 0 14px 14px;
+}
+.acf-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 4px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: rgba(201,168,76,0.03);
+}
+.acf-lag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-400, #7A7060);
+}
+.acf-val {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.acf-val.pos { color: var(--gold-200, #F0D080); }
+.acf-val.neg { color: #E97266; }
+
+/* ── compare-window controls in PriceLineChart ──────── */
+.compare-controls {
+  display: flex;
+  gap: 12px;
+  padding: 8px 14px 4px;
+  flex-wrap: wrap;
+}
+.compare-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--ink-400);
+}
+.compare-label input[type="month"] {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-100);
+  background: rgba(10,10,11,0.6);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 4px 6px;
+  color-scheme: dark;
+}
+.compare-label input[type="month"]:focus-visible {
+  outline: 2px solid var(--gold-300);
+  outline-offset: 2px;
+}

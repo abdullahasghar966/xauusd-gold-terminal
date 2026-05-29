@@ -1,0 +1,69 @@
+.ticker {
+  position: relative;
+  margin-top: 22px;
+  height: 36px;
+  overflow: hidden;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  background: linear-gradient(180deg, rgba(17,17,20,0.6), rgba(10,10,11,0.9));
+}
+.ticker.placeholder { opacity: 0.4; }
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.ticker-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.ticker-symbol {
+  color: var(--ink-400);
+  letter-spacing: 0.16em;
+}
+.ticker-price {
+  color: var(--gold-200);
+  font-weight: 500;
+}
+.ticker-delta { font-weight: 600; }
+.ticker-delta.pos { color: var(--gold-300); }
+.ticker-delta.neg { color: #E97266; }
+
+.ticker-sep {
+  width: 1px;
+  height: 14px;
+  background: var(--hairline);
+  margin-left: 10px;
+}
+
+.ticker-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+.ticker-edge-l {
+  left: 0;
+  background: linear-gradient(90deg, var(--obsidian-1) 10%, transparent);
+}
+.ticker-edge-r {
+  right: 0;
+  background: linear-gradient(270deg, var(--obsidian-1) 10%, transparent);
+}

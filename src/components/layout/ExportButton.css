@@ -1,0 +1,72 @@
+.export-btn-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-200);
+  padding: 6px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: rgba(201,168,76,0.06);
+  cursor: pointer;
+  transition: color 200ms, background 200ms, border-color 200ms;
+  min-height: 28px;
+}
+.export-btn:hover {
+  background: rgba(201,168,76,0.14);
+  border-color: rgba(201,168,76,0.4);
+}
+.export-btn[disabled] { opacity: 0.6; cursor: progress; }
+.export-btn.busy { color: var(--ink-300); }
+.export-btn:focus-visible {
+  outline: 2px solid var(--gold-300);
+  outline-offset: 2px;
+}
+
+.export-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  display: grid;
+  min-width: 140px;
+  padding: 6px;
+  background: linear-gradient(180deg, rgba(34,34,42,0.96), rgba(10,10,11,0.96));
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.18);
+  backdrop-filter: blur(10px);
+  z-index: 20;
+}
+.export-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-200);
+  text-align: left;
+}
+.export-menu button:hover {
+  background: rgba(201,168,76,0.1);
+  color: var(--gold-200);
+}
+
+@media (max-width: 720px) {
+  .export-btn { min-height: 44px; padding-inline: 16px; }
+  .export-menu button { padding: 12px 12px; }
+}

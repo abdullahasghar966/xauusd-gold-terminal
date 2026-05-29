@@ -1,0 +1,37 @@
+{
+  "name": "xauusd-gold-intelligence",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "framer-motion": "^11.11.0",
+    "gsap": "^3.12.5",
+    "html-to-image": "^1.11.13",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.460.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/d3": "^7.4.3",
+    "@types/papaparse": "^5.3.15",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^4.1.7",
+    "jsdom": "^29.1.1",
+    "vite": "^5.4.11",
+    "vitest": "^4.1.7"
+  }
+}
