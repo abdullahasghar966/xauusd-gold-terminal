@@ -1,5 +1,7 @@
 # XAUUSD · Gold Intelligence Terminal
 
+**🔗 Live site:** [xauusd-gold-terminal-alpha.vercel.app](https://xauusd-gold-terminal-alpha.vercel.app)
+
 A single-page React dashboard visualising 2,846 daily XAUUSD records (2015–2026)
 in the aesthetic of a private Swiss wealth terminal: deep obsidian background,
 molten gold accents, Playfair Display + JetBrains Mono typography, orchestrated
